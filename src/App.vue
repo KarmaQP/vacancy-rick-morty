@@ -123,6 +123,9 @@ html {
   --gray-text-color: #c5c5c5;
   --card-border-color: #e9e9e9;
   --card-bg-color: #2b2b2b;
+  --nav-bg-color: #0a0a0a;
+  --nav-tab-text-hover-color: #f1a80a;
+  --nav-tab-bg-hover-color: #1a037e;
 }
 
 @font-face {
@@ -143,7 +146,8 @@ body {
 
 main {
   max-width: 140rem;
-  margin: 6.4rem auto;
+  margin: 0 auto;
+  padding: 6.4rem 0;
 }
 
 .list__grid {
@@ -189,5 +193,27 @@ img {
 
 .item__name {
   font-size: 1.8rem;
+}
+
+/* PAGES */
+.pages {
+  margin-top: 4.8rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  background-color: var(--card-bg-color);
+  border: 2px solid var(--card-border-color);
+  border-radius: 50%;
+  min-height: 3.4rem;
+  min-width: 3.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 </style>

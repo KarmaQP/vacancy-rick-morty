@@ -20,7 +20,7 @@
 header {
   width: 100%;
   height: 5rem;
-  background-color: #11005c;
+  background-color: var(--nav-bg-color);
 }
 
 nav {
@@ -54,8 +54,9 @@ a {
 a:hover,
 a:active,
 a.active {
-  color: #f1a80a;
-  border-color: #f1a80a;
-  background-color: #1a037e;
+  color: var(--nav-tab-text-hover-color);
+  border-color: var(--nav-tab-text-hover-color);
+  background-color: var(--nav-tab-bg-hover-color);
+  border-radius: 24px;
 }
 </style>

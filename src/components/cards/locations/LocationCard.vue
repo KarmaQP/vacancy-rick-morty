@@ -1,5 +1,5 @@
 <template>
-  <li class="item__card">
+  <li class="item__card" @click="toggleModalWindow">
     <div class="card">
       <ul class="card__location-info">
         <li class="card__name">{{ name }}</li>
@@ -7,11 +7,23 @@
       </ul>
     </div>
   </li>
+  <location-info-card
+    v-if="isModalVisible"
+    :card-info="cardInfo"
+    @toggle-modal-window="toggleModalWindow"
+  ></location-info-card>
 </template>
 
 <script>
+import LocationInfoCard from './LocationInfoCard.vue';
+
 export default {
+  components: { LocationInfoCard },
   props: {
+    locationId: {
+      type: Number,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -19,6 +31,30 @@ export default {
     locationType: {
       type: String,
       required: true,
+    },
+  },
+  data() {
+    return {
+      isModalVisible: false,
+      cardInfo: null,
+    };
+  },
+  beforeMount() {
+    this.loadCardInfo();
+  },
+  methods: {
+    toggleModalWindow() {
+      this.isModalVisible = !this.isModalVisible;
+    },
+    async loadCardInfo() {
+      const response = await fetch(
+        `https://rickandmortyapi.com/api/location/${this.locationId}`
+      );
+
+      if (!response.ok) return;
+
+      const json = await response.json();
+      this.cardInfo = json;
     },
   },
 };
