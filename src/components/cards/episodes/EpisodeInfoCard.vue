@@ -10,19 +10,19 @@
     </div>
     <ul class="card__info">
       <li class="item__info">
-        <div><b>Episode:</b></div>
+        <div>Episode:</div>
         <div>{{ cardInfo.episode }}</div>
       </li>
       <li class="item__info">
-        <div><b>Name:</b></div>
+        <div>Name:</div>
         <div>{{ cardInfo.name }}</div>
       </li>
       <li class="item__info">
-        <div><b>Air Date:</b></div>
+        <div>Air Date:</div>
         <div>{{ cardInfo.air_date }}</div>
       </li>
       <li class="item__info">
-        <div><b>Characters:</b></div>
+        <div>Characters:</div>
         <div>
           <div v-for="name in charactersNames" :key="name">
             {{ name }}

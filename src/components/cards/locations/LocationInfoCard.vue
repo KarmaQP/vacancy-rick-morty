@@ -10,19 +10,19 @@
     </div>
     <ul class="card__info">
       <li class="item__info">
-        <div><b>Name:</b></div>
+        <div>Name:</div>
         <div>{{ cardInfo.name }}</div>
       </li>
       <li class="item__info">
-        <div><b>Dimension:</b></div>
+        <div>Dimension:</div>
         <div>{{ cardInfo.dimension }}</div>
       </li>
       <li class="item__info">
-        <div><b>Type:</b></div>
+        <div>Type:</div>
         <div>{{ cardInfo.type }}</div>
       </li>
       <li class="item__info">
-        <div><b>Residents:</b></div>
+        <div>Residents:</div>
         <div>
           <div v-for="name in residentsNames" :key="name">
             {{ name }}
