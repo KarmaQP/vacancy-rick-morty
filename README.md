@@ -4,7 +4,7 @@
 
 ## Демонстранция работы
 
-<video src='https://youtu.be/eW1ifw3S3Ms' width=180/>
+Ссылка на видео: https://www.youtube.com/watch?v=eW1ifw3S3Ms
 
 ## Project setup
 
