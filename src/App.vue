@@ -124,8 +124,8 @@ html {
   --card-border-color: #e9e9e9;
   --card-bg-color: #2b2b2b;
   --nav-bg-color: #0a0a0a;
-  --nav-tab-text-hover-color: #f1a80a;
-  --nav-tab-bg-hover-color: #1a037e;
+  --nav-tab-text-hover-color: #e9e9e9;
+  --nav-tab-bg-hover-color: #141414;
 }
 
 @font-face {
@@ -156,7 +156,7 @@ main {
   gap: 3.2rem;
 }
 
-/* Card */
+/* CARD */
 .item__card {
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -195,6 +195,65 @@ img {
   font-size: 1.8rem;
 }
 
+/* CARD INFO */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  padding: 2.4rem;
+  border-radius: 12px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+img {
+  max-width: 60%;
+}
+
+.item__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item__info div {
+  justify-self: start;
+  text-align: left;
+}
+
 /* PAGES */
 .pages {
   margin-top: 4.8rem;
@@ -215,5 +274,55 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+/* ADAPTIVE */
+
+@media (max-width: 1440px) {
+  main {
+    max-width: 80rem;
+  }
+
+  .list__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    max-width: 60rem;
+  }
+
+  .list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  main {
+    max-width: 40rem;
+  }
+
+  .list__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .close-modal {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    max-width: 30rem;
+  }
+
+  .close-modal {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }
 </style>

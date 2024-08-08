@@ -1,7 +1,7 @@
 <template>
   <li class="item__card" @click="toggleModalWindow">
     <div class="card">
-      <ul class="card__location-info">
+      <ul class="card__info">
         <li class="card__name">{{ name }}</li>
         <li>{{ locationType }}</li>
       </ul>
@@ -83,7 +83,7 @@ export default {
   align-items: center;
 }
 
-.card__location-info {
+.card__info {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;

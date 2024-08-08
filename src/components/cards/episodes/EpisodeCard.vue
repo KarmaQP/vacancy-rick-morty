@@ -88,7 +88,7 @@ export default {
   align-items: center;
 }
 
-.card__episode-info {
+.card__info {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
